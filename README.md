@@ -1,3 +1,5 @@
+# Forked from https://github.com/sxyu/sdf.git
+
 # Triangle mesh to signed-distance function (SDF)
 
 Given a triangle mesh and a set of points, this library supports:

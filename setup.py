@@ -22,6 +22,7 @@ def find_eigen(min_ver=(3, 2, 0)):
     import re, os
     try_paths = [
         '/usr/include/eigen3',
+        './eigen3',
         '/usr/local/include/eigen3',
         os.path.expanduser('~/.local/include/eigen3'),
         'C:/Program Files/eigen3',

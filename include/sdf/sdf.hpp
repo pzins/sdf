@@ -32,9 +32,9 @@
 
 #include <memory>
 #include <vector>
-#ifdef __GNUC__
-#include <experimental/propagate_const>
-#endif
+// #ifdef __GNUC__
+// #include <experimental/propagate_const>
+// #endif
 #include <Eigen/Geometry>
 
 namespace sdf {
@@ -248,7 +248,8 @@ struct SDF {
 
     struct Impl;
 #ifdef __GNUC__
-    std::experimental::propagate_const<std::unique_ptr<Impl>> p_impl;
+    // std::experimental::propagate_const<std::unique_ptr<Impl>> p_impl;
+    std::unique_ptr<Impl> p_impl;
 #else
     std::unique_ptr<Impl> p_impl;
 #endif
@@ -359,7 +360,8 @@ struct Renderer {
 
     struct Impl;
 #ifdef __GNUC__
-    std::experimental::propagate_const<std::unique_ptr<Impl>> p_impl;
+    // std::experimental::propagate_const<std::unique_ptr<Impl>> p_impl;
+    std::unique_ptr<Impl> p_impl;
 #else
     std::unique_ptr<Impl> p_impl;
 #endif
